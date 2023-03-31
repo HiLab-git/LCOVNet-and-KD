@@ -136,9 +136,6 @@ def main():
     task_name = "13"
     folds = [0]
     model = "3d_fullres"
-
-    
-    
     
     # input_folder = args.input_folder
     # output_folder = args.output_folder

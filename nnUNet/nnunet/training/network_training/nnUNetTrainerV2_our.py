@@ -240,9 +240,9 @@ class nnUNetTrainerV2_our(nnUNetTrainer):
         采用知识蒸馏的方法
         """
         from nnunet.network_architecture.unet import UNet
-        self.teacher_network = UNet(C_in=32, n_classes=self.num_classes, m=1, _ds = config['train']['_ds'])
+        self.teacher_network = UNet(C_in=32, n_classes=self.num_classes, m=1, _ds = True)
         self.teacher_network.cuda()
-        teacher_checkpoint = config['train']['teacher_checkpoint']
+        teacher_checkpoint = ''
         saved_teacher_checkpoint = torch.load(
             teacher_checkpoint, map_location=torch.device('cuda', torch.cuda.current_device()))
 

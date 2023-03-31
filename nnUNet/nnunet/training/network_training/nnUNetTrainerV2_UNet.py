@@ -35,8 +35,8 @@ from torch import nn
 from torch.cuda.amp import autocast
 from nnunet.training.learning_rate.poly_lr import poly_lr
 from batchgenerators.utilities.file_and_folder_operations import *
-# nnUNet_train 3d_fullres nnUNetTrainerV2_UNet_teacher1  13 4 -p SRv1
-# nnUNetTrainerV2_UNet_teacher1
+from nnunet.network_architecture.unet import UNet
+
 class nnUNetTrainerV2_UNet(nnUNetTrainer):
     """
     Info for Fabian: same as internal nnUNetTrainerV2_2
@@ -142,7 +142,6 @@ class nnUNetTrainerV2_UNet(nnUNetTrainer):
         Known issue: forgot to set neg_slope=0 in InitWeights_He; should not make a difference though
         :return:
         """
-        from nnunet.network_architecture.unet import UNet
         self.network = UNet(C_in=32, n_classes=self.num_classes, m=1, _ds = config['train']['_ds'])
         if torch.cuda.is_available():
             self.network.cuda()

@@ -138,8 +138,7 @@ class LCOVNet_with_feature(SegmentationNetwork):
         self.n_class = n_classes
         self.inchn = 32
         self._deep_supervision = is_ds
-        self.do_ds = is_ds        # self.ft_chns = [self.inchn, self.inchn*2,
-        #                 self.inchn*4, self.inchn*8, self.inchn*8]  # 最初始设置 O
+
         self.ft_chns = [self.inchn, self.inchn*2,
                         self.inchn*4, self.inchn*8, self.inchn*8]  # A
         # print(self.ft_chns)
@@ -232,7 +231,7 @@ class LCOVNet_with_feature(SegmentationNetwork):
         segout4 = self.upscale_logits_ops[3](self.segout4(x9))
 
         # return tuple([segout4, segout3, segout2, segout1, x9, x8, x7, x6])
-        if  self.do_ds:
+        if  self._deep_supervision:
             return tuple([segout4, segout3, segout2, segout1, x9, x8, x7, x6])
         else:
             return segout4

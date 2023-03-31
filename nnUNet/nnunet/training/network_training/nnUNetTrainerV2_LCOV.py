@@ -266,12 +266,6 @@ class nnUNetTrainerV2_LCOV(nnUNetTrainer):
             with autocast():
                 output = self.network(data)[0:4]
                 del data
-                # print(len(output))
-                # # for i in range(len(output)):
-                # #     print(output[i].shape)
-                # #     print(output[i].max())
-                # #     print(target[i].shape)
-                # input()
                 l = self.loss(output, target)
                 # print(l)
 
