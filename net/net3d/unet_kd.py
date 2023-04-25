@@ -156,6 +156,6 @@ class UNet_KD(nn.Module):
         segout4 = self.segout4(x9)
 
         if (self.do_ds == True):
-            return tuple([segout4, segout3, segout2, segout1, x9, x8, x7, x6])
+            return [segout4, segout3, segout2, segout1, x9, x8, x7, x6]
         else:
             return segout4

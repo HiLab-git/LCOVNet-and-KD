@@ -27,6 +27,7 @@ from pymic.loss.seg.dice import DiceLoss, FocalDiceLoss, NoiseRobustDiceLoss
 from pymic.loss.seg.exp_log import ExpLogLoss
 from pymic.loss.seg.mse import MSELoss, MAELoss
 from pymic.loss.seg.slsr import SLSRLoss
+from pymic.loss.seg.kd import MSKDCAKDLoss
 
 SegLossDict = {
     'CrossEntropyLoss': CrossEntropyLoss,
@@ -38,8 +39,6 @@ SegLossDict = {
     'MAELoss': MAELoss,
     'MSELoss': MSELoss,
     'SLSRLoss': SLSRLoss,
-    'FNKD' : FNKDLoss,
-    'MSKD' : MSKDLoss,
-    'CAKD' : CAKDLoss,
+    'MSKD_and_CAKDLoss' : MSKDCAKDLoss,
     }
 
