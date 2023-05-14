@@ -3,6 +3,7 @@ from __future__ import print_function, division
 
 import torch
 import torch.nn as nn
+from torch.cuda.amp import autocast
 from torch import Tensor
 from pymic.loss.seg.abstract import AbstractSegLoss
 from pymic.loss.seg.util import reshape_tensor_to_2D, get_classwise_dice
@@ -41,7 +42,7 @@ class MSKDCAKDLoss(AbstractSegLoss):
         teacher_outputs = F.softmax(teacher_outputs, dim=1)
         teacher_outputs = teacher_outputs.reshape(B, C, D*W*H)
 
-        from torch.cuda.amp import autocast
+        
         with autocast(enabled=False):
             student_outputs = torch.bmm(student_outputs, student_outputs.permute(
                 0, 2, 1))
@@ -54,11 +55,11 @@ class MSKDCAKDLoss(AbstractSegLoss):
         loss = -torch.mean(Similarity_loss)  # loss = 0 fully same
         return loss
 
-    def FNKD(self, student_outputs, teacher_outputs):
-        t = 2
-        f_L2norm = torch.norm(f)
-        q_fn = F.log_softmax((t * teacher_outputs) / f_L2norm, dim=1)
-        to_kd = F.softmax((t * soft_outputs) / f_L2norm, dim=1)
+    def FNKD(self, student_outputs, teacher_outputs, student_feature, teacher_feature):
+        student_L2norm = torch.norm(student_feature)
+        teacher_L2norm = torch.norm(teacher_feature)
+        q_fn = F.log_softmax(teacher_outputs / teacher_L2norm, dim=1)
+        to_kd = F.softmax(student_outputs / student_L2norm, dim=1)
         KD_ce_loss = self.ce(
             q_fn, to_kd[:, 0].long())
         return KD_ce_loss

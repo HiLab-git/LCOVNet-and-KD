@@ -16,11 +16,6 @@ pymic_train UNet/config/unet.cfg
 pymic_train KD/config/unet.cfg
 ```
 
-3. For the prediction stage, use the following command:
-```
-nnUNet_predict
-```
-
 ## Testing and evaluation
 1. Run the following command to obtain segmentation results of testing images based on the best-performing checkpoint on the validation set. By default we use sliding window inference to get better results. You can also edit the `testing` section of `kd/config/kd.cfg` to use other inference strategies.
 
