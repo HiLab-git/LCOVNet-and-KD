@@ -6,13 +6,13 @@
 [pymic_example]:https://github.com/HiLab-git/PyMIC_examples
 This repository provides the code for "Efficient Multi-Organ Segmentation from 3D Abdominal CT Images with Lightweight Network and Knowledge Distillation"(accepted by [TMI][tmi_link]) and "https://ieeexplore.ieee.org/abstract/document/9434023"(published by [ISBI][isbi_link]).
 
-![result](./pic/result.png)
+![result](./code/pic/result.png)
 Visual comparison between different networks for abdominal organ segmentation on the [WORD][word_link] dataset.
 
-![structure](./pic/kd_structure.png)
+![structure](./code/pic/kd_structure.png)
 Overview of our proposed lightweight LCOV-Net and KD strategies. LCOV-Net is built on our Lightweight Attention-based Convolutional Blocks (LACB-H and LACB-L) to reduce the model size. To improve itsmperformance, we introduce Class-Affinity Knowledge Distillation (CAKD) and Multi-Scale Knowledge Distillation (MSKD) as shown in (c) to effectively distill knowledge from a heavy-weight teacher model to LCOV-Net. Note that for simplicity, the KD losses are only shown for the highest resolution level.
 
-![structure](./pic/lcovnet_structure.png)
+![structure](./code/pic/lcovnet_structure.png)
 Our proposed LACB for efficient computation.
 
 
