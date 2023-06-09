@@ -1,0 +1,5 @@
+image,label
+data_word/imagesTr/case_0002_0000.nii.gz,data_word/labelsTr/case_0002.nii.gz
+data_word/imagesTr/case_0003_0000.nii.gz,data_word/labelsTr/case_0003.nii.gz
+data_word/imagesTr/case_0015_0000.nii.gz,data_word/labelsTr/case_0015.nii.gz
+data_word/imagesTr/case_0023_0000.nii.gz,data_word/labelsTr/case_0023.nii.gz
