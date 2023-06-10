@@ -4,15 +4,16 @@
 [word_link]:https://www.sciencedirect.com/science/article/abs/pii/S1361841522002705
 [pymic_link]:https://github.com/HiLab-git/PyMIC
 [pymic_example]:https://github.com/HiLab-git/PyMIC_examples
+[baidu_link]:https://pan.baidu.com/s/1HwD1iqHorgXfYXnrChdzIg
 This repository provides the code for "Efficient Multi-Organ Segmentation from 3D Abdominal CT Images with Lightweight Network and Knowledge Distillation"(accepted by [TMI][tmi_link]) and "https://ieeexplore.ieee.org/abstract/document/9434023"(published by [ISBI][isbi_link]).
 
-![result](./code/pic/result.png)
+![result](./pic/result.png)
 Visual comparison between different networks for abdominal organ segmentation on the [WORD][word_link] dataset.
 
-![structure](./code/pic/kd_structure.png)
+![structure](./pic/kd_structure.png)
 Overview of our proposed lightweight LCOV-Net and KD strategies. LCOV-Net is built on our Lightweight Attention-based Convolutional Blocks (LACB-H and LACB-L) to reduce the model size. To improve itsmperformance, we introduce Class-Affinity Knowledge Distillation (CAKD) and Multi-Scale Knowledge Distillation (MSKD) as shown in (c) to effectively distill knowledge from a heavy-weight teacher model to LCOV-Net. Note that for simplicity, the KD losses are only shown for the highest resolution level.
 
-![structure](./code/pic/lcovnet_structure.png)
+![structure](./pic/lcovnet_structure.png)
 Our proposed LACB for efficient computation.
 
 
@@ -28,7 +29,8 @@ Please contact Xiangde (luoxd1996 AT gmail DOT com) for the dataset (**the label
 In addition, this work is still ongoing, the **WORD** dataset will be extended to larger and more diverse (more patients, more organs, and more modalities, more clinical hospitals' data and MR Images will be considered to include future), any **suggestion**, **comment**, **collaboration**, and **sponsor** are welcome. 
 
 # How to use
-Run `./KD/run.sh`. The results will be saved in `./KD/model/kd`.
+1. Download the pretrained model and example CT images from [Baidu Netdisk][baidu_link] (extract code 9jlj).
+2. Run `./KD/run.sh`. The results will be saved in `./KD/model/kd`.
 
 # How to train COPLE-Net
 Training was implemented with [PyMIC][pymic_link].
