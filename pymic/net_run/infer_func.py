@@ -91,7 +91,8 @@ class Inferer(object):
         temp_mask    = torch.ones(mask_shape).to(image.device)
         temp_in_shape = img_full_shape[:2] + window_size
         tempx = torch.ones(temp_in_shape).to(image.device)
-        out_num, scale_list = self.__get_prediction_number_and_scales(tempx)
+        _, scale_list = self.__get_prediction_number_and_scales(tempx)
+        out_num = 4
         if(out_num == 1): # for a single prediction
             output = torch.zeros(output_shape).to(image.device)
             for c0 in crop_start_list:

@@ -29,8 +29,9 @@ Please contact Xiangde (luoxd1996 AT gmail DOT com) for the dataset (**the label
 In addition, this work is still ongoing, the **WORD** dataset will be extended to larger and more diverse (more patients, more organs, and more modalities, more clinical hospitals' data and MR Images will be considered to include future), any **suggestion**, **comment**, **collaboration**, and **sponsor** are welcome. 
 
 # How to use
-1. Download the pretrained model and example CT images from [Baidu Netdisk][baidu_link] (extract code 9jlj).
-2. Run `./KD/run.sh`. The results will be saved in `./KD/model/kd`.
+1. Install [PyMIC][pymic_link], and add knowledge_distillation.py and other files to Pymic.
+2. Download the pretrained model and example CT images from [Baidu Netdisk][baidu_link] (extract code 9jlj).
+3. Run `./KD/run.sh`. The results will be saved in `./KD/model/kd`.
 
 # How to train COPLE-Net
 Training was implemented with [PyMIC][pymic_link].
