@@ -41,6 +41,7 @@ In addition, this work is still ongoing, the **WORD** dataset will be extended t
 
 # How to Cite
 BibTeX entry for this work:
+
     @article{zhao2023tmi,
     author={Zhao, Qianfei and Zhong, Lanfeng and Xiao, Jianghong and Zhang, Jingbo and Chen, Yinan and Liao, Wenjun and Zhang, Shaoting and Wang, Guotai},
     journal={IEEE Transactions on Medical Imaging}, 
