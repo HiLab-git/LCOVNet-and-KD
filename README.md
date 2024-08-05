@@ -1,11 +1,31 @@
-# Efficient Multi-Organ Segmentation from 3D Abdominal CT Images with Lightweight Network and Knowledge Distillation
+# LCOV-Net: A lightweight CNN for 3D image segmentation with knowledge distillation
 [tmi_link]:https://ieeexplore.ieee.org/document/10083150
 [isbi_link]:https://ieeexplore.ieee.org/abstract/document/9434023
 [word_link]:https://www.sciencedirect.com/science/article/abs/pii/S1361841522002705
 [pymic_link]:https://github.com/HiLab-git/PyMIC
 [pymic_example]:https://github.com/HiLab-git/PyMIC_examples
 [baidu_link]:https://pan.baidu.com/s/1HwD1iqHorgXfYXnrChdzIg
-This repository provides the code for "Efficient Multi-Organ Segmentation from 3D Abdominal CT Images with Lightweight Network and Knowledge Distillation"(accepted by [TMI][tmi_link]) and "https://ieeexplore.ieee.org/abstract/document/9434023"(published by [ISBI][isbi_link]).
+
+This repository provides the code for the LCOV-Net that was publihsed on [ISBI 2021][isbi_link] and IEEE [TMI 2023][tmi_link]:
+
+    @article{zhao2023tmi,
+    author={Zhao, Qianfei and Zhong, Lanfeng and Xiao, Jianghong and Zhang, Jingbo and Chen, Yinan and Liao, Wenjun and Zhang, Shaoting and Wang, Guotai},
+    journal={IEEE Transactions on Medical Imaging}, 
+    title={Efficient Multi-Organ Segmentation From 3D Abdominal CT Images With Lightweight Network and Knowledge Distillation}, 
+    year={2023},
+    volume={42},
+    number={9},
+    pages={2513-2523},
+    doi={10.1109/TMI.2023.3262680}}
+    @inproceedings{zhao2021isbi,
+    author={Zhao, Qianfei and Wang, Huan and Wang, Guotai},
+    booktitle={2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI)}, 
+    title={LCOV-NET: A Lightweight Neural Network For COVID-19 Pneumonia Lesion Segmentation From 3D CT Images}, 
+    year={2021},
+    volume={},
+    number={},
+    pages={42-45},
+    doi={10.1109/ISBI48211.2021.9434023}}
 
 ![result](./pic/result.png)
 Visual comparison between different networks for abdominal organ segmentation on the [WORD][word_link] dataset.
