@@ -51,13 +51,11 @@ BibTeX entry for this work:
     number={9},
     pages={2513-2523},
     doi={10.1109/TMI.2023.3262680}}
-    
+
     @inproceedings{zhao2021isbi,
     author={Zhao, Qianfei and Wang, Huan and Wang, Guotai},
     booktitle={2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI)}, 
     title={LCOV-NET: A Lightweight Neural Network For COVID-19 Pneumonia Lesion Segmentation From 3D CT Images}, 
     year={2021},
-    volume={},
-    number={},
     pages={42-45},
     doi={10.1109/ISBI48211.2021.9434023}}
